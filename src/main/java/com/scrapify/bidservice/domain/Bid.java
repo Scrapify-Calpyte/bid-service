@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class Bid {
     private Buyer buyer;
+    private Seller seller;
     private Double qty;
     private Double proposedAmt;
     private String bidStatus;

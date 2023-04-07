@@ -1,9 +1,12 @@
 package com.scrapify.bidservice.repository;
 
-import com.scrapify.bidservice.domain.Bids;
+import com.scrapify.bidservice.domain.Bid;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
-public interface BidsRepository extends MongoRepository<Bids,String> {
+public interface BidRepository extends MongoRepository<Bid,String> {
+    List<Bid> findBySellerId(String id);
 }

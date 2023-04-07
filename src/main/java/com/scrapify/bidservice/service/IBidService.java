@@ -1,11 +1,13 @@
 package com.scrapify.bidservice.service;
 
+import com.scrapify.bidservice.domain.Bid;
 import com.scrapify.bidservice.domain.Bids;
 
 import java.util.List;
 
 public interface IBidService {
-     Bids save(Bids bids);
 
-     List<Bids> getAll();
+     Bid placeBid(Bid bid);
+
+     Bids getBidsBySellerId(String sellerId);
 }

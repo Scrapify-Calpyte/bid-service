@@ -12,5 +12,4 @@ public class Bids {
     private String id;
     private String inventoryId;
     private List<Bid> bids;
-
 }
