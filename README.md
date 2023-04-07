@@ -1,1 +1,0 @@
-# scrapify-bid-service
