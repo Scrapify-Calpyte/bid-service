@@ -6,8 +6,8 @@ import org.springframework.kafka.annotation.EnableKafka;
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
-@EnableKafka
+//@Configuration
+//@EnableKafka
 public class KafkaBrokerConfig {
     @Value("${kafka.broker.id}")
     private int brokerId;
