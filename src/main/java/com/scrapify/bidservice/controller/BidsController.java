@@ -32,4 +32,14 @@ public class BidsController {
     ResponseEntity<Bids> getBids(@RequestParam("id") String id){
         return new ResponseEntity(bidService.getBidsBySellerId(id),HttpStatus.OK);
     }
+
+    @PostMapping("/accept-bid")
+    ResponseEntity<Bid> acceptBid(@RequestParam("id") String bidId){
+        return  new ResponseEntity<>(bidService.acceptBid(bidId) ,HttpStatus.OK);
+    }
+
+    @PostMapping("/decline-bid")
+    ResponseEntity<Bid> declineBid(@RequestParam("id") String bidId){
+        return  new ResponseEntity<>(bidService.cancelBid(bidId) ,HttpStatus.OK);
+    }
 }

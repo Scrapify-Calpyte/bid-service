@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class BidDAOImpl implements IBidDAO {
@@ -22,5 +23,11 @@ public class BidDAOImpl implements IBidDAO {
     @Override
     public List<Bid> getBidsBySeller(String sellerId) {
         return bidRepository.findBySellerId(sellerId);
+    }
+
+    @Override
+    public Bid acceptBid(String id) {
+        Optional<Bid> bid = bidRepository.findById(id);
+        return bid.orElse(null);
     }
 }

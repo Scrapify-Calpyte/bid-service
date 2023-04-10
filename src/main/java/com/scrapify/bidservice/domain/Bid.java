@@ -8,5 +8,6 @@ public class Bid {
     private Seller seller;
     private Double qty;
     private Double proposedAmt;
-    private String bidStatus;
+    private Integer bidStatus;
+    private Product product;
 }

@@ -8,4 +8,6 @@ public interface IBidDAO {
     Bid placeBid(Bid bid);
 
     List<Bid> getBidsBySeller(String sellerId);
+
+    Bid acceptBid(String id);
 }
